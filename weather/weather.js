@@ -24,7 +24,6 @@ $.getJSON(weatherAlertsUrl, function(data) {
       if (feature.properties.severity === 'Severe') alertColor = 'red';
       return { color: alertColor }
     },
-   
     // Add a popup on each feature showing the NWS alert headline
     onEachFeature: function(feature, layer) {
       layer.bindPopup(feature.properties.headline);
